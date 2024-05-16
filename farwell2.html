@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farewell! (Click for a Surprise!)</title>
+    <style>body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: #f0f0f0;
+    }
+    
+    .container {
+        text-align: center;
+        padding: 50px;
+    }
+    
+    h1 {
+        font-size: 4em;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    
+    p {
+        font-size: 1.2em;
+        color: #666;
+    }
+    
+    .heart-container {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        display: none; /* Initially hidden */
+        margin: 0 auto; /* Center the heart */
+    }
+    
+    .heart {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50% / 50%;
+        background-color: #f00;
+        transform: scale(0.5); /* Initially shrunk */
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .heart::before,
+    .heart::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background-color: inherit;
+    }
+    
+    .heart::before {
+        left: 0;
+    }
+    
+    .heart::after {
+        right: 0;
+    }
+    
+    .heart::before {
+        width: 50%;
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    
+    .heart::after {
+        width: 50%;
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    
+    .message-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    #surpriseButton {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Best Wishes, [Name]!</h1>
+        <p>Thank you for everything!</p>
+        <button id="surpriseButton">Click for a Surprise!</button>
+        <div class="heart-container"></div>
+        <div class="message-box">
+            <h2>We'll miss you!</h2>
+            <p>You've made a real difference here.</p>
+        </message-box>
+    </div>
+    <script>const surpriseButton = document.getElementById('surpriseButton');
+        const heartContainer = document.querySelector('.heart-container');
+        const messageBox = document.querySelector('.message-box');
+        
+        surpriseButton.addEventListener('click', () => {
+          heartContainer.style.display = 'block'; // Show heart
+          messageBox.style.opacity = 1; // Show message box
+        });
+        </script>
+</body>
+</html>
+

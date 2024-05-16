@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farewell!</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      .container {
+        text-align: center;
+        padding: 50px;
+      }
+
+      h1 {
+        font-size: 4em;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1.2em;
+        color: #666;
+      }
+
+      .confetti-container {
+        width: 100%;
+        height: 200px;
+        position: relative;
+      }
+
+      .confetti {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: random(#f00, #ff0, #00f);
+        animation: fall 2s linear infinite;
+      }
+
+      @keyframes fall {
+        from {
+          top: 0;
+          transform: rotate(0deg);
+        }
+        to {
+          top: 100%;
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>So Long, Farewell...</h1>
+      <p>But not forgotten!</p>
+      <div class="confetti-container"></div>
+    </div>
+    <script>
+      const container = document.querySelector(".confetti-container");
+
+      function createConfetti() {
+        const confetti = document.createElement("div");
+        confetti.classList.add("confetti");
+        confetti.style.left = Math.random() * container.offsetWidth + "px";
+        container.appendChild(confetti);
+      }
+
+      for (let i = 0; i < 100; i++) {
+        createConfetti();
+      }
+    </script>
+  </body>
+</html>

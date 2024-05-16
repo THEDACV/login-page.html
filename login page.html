@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iRiS Software Solutions - Login</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #40e0d0;
+      }
+
+      .container {
+        background-color: blue;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        animation: enter-container 0.5s ease-in-out forwards;
+      }
+
+      @keyframes enter-container {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .logo {
+        text-align: center;
+        margin-bottom: 20px;
+        animation: logo-pulse 1.5s infinite alternate ease-in-out;
+      }
+
+      @keyframes logo-pulse {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.05);
+        }
+      }
+
+      .login-form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+      }
+
+      .login-form h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .input-field {
+        margin-bottom: 15px;
+      }
+
+      .input-field label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .input-field input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 100%;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .input-field input:focus {
+        border-color: #999;
+        outline: none;
+      }
+
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .checkbox-container input {
+        margin-right: 5px;
+      }
+
+      .forgot-password {
+        text-align: right;
+        color: #aaa;
+        font-size: 0.8em;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .forgot-password:hover {
+        color: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="iris-logo.svg" alt="iRiS Software Solutions Logo" />
+      </div>
+      <form action="#" class="login-form">
+        <h2>Login</h2>
+        <div class="input-field">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="input-field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="checkbox-container">
+          <input type="checkbox" id="remember-me" />
+          <label for="remember-me">Remember Me</label>
+        </div>
+        <a href="#" class="forgot-password">Forgot Password?</a>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
