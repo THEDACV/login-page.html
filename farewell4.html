@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NDRK First Grade College - ABHINANDANA 2k24</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        background-color: #f7f7f7;
+      }
+
+      header {
+        background-color: #2f4f4f;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .ndrk-logo {
+        display: inline-block;
+        font-size: 3em;
+        font-weight: bold;
+      }
+
+      .logo-glow {
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 7px #fff;
+        }
+        to {
+          text-shadow: 0 0 15px #fff;
+        }
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      .hero {
+        position: relative;
+        text-align: center;
+      }
+
+      .hero-content {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 40px;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .hero-content h2 {
+        margin-bottom: 20px;
+        font-size: 2em;
+      }
+
+      .hero-content button {
+        background-color: #2f4f4f;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      .hero-content button:hover {
+        background-color: #3b5959;
+      }
+
+      .confetti-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .confetti {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #f00;
+        animation: confetti-fall 3s linear infinite;
+      }
+    </style>
+    <script>var box = document.getElementById("box");
+        var position = 0;
+    
+        function animate() {
+          position++;
+          box.style.left = position + "px";
+          if (position > window.innerWidth - box.offsetWidth) {
+            position = 0;
+          }
+          requestAnimationFrame(animate);
+        }
+    
+        animate();
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1 class="ndrk-logo">
+        <img src="logo.jpg" />
+        <span class="logo-glow"> NDRK First Grade College</span>
+      </h1>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h2><b>ABHINANDANA 2k24</b></h2>
+            We celebrate your achievements and wish you the best in your future
+            endeavors.
+          </p>
+          <button id="see-details">See Event Details</button>
+        </div>
+        <div class="confetti-container">
+          <span class="confetti"></span>
+          <span class="confetti"></span>
+          <span class="confetti"></span>
+        </div>
+      </section>
+      <section class="event-details" id="event-details">
+        <h2>Event Details</h2>
+        <ul>
+          <li>Date: Saturday, June 1st, 2024</li>
+          <li>Time: 10:00 AM</li>
+          <li>Location: College Auditorium</li>
+        </ul>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
