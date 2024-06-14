@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      header,
+      footer {
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 20px;
+      }
+
+      #skills ul,
+      #projects.project {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .project {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+      }
+
+      .project:last-child {
+        border-bottom: none;
+      }
+    </style>
+    <script>
+      document
+        .querySelector(".contact-button")
+        .addEventListener("click", function () {
+          alert("Contact form submitted!");
+        });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>A brief introduction about yourself.</p>
+      </header>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML/CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <!-- Add more skills -->
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>Project Name</h3>
+          <p>A short description of the project.</p>
+          <a href="#">View Project</a>
+        </div>
+        <!-- Repeat the above div for more projects -->
+      </section>
+
+      <footer>
+        <h2>Contact Me</h2>
+        <p>Email: your.email@example.com</p>
+        <p>Phone: +1234567890</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
